@@ -1,19 +1,14 @@
 {
     "version": 2,
-    "routes": [
-      { "src": "/(.*)", "dest": "/api/index.js" }
+    "bulids": [
+      { "src": "/api/app.js",
+    "use": "@vercel/node" }
     ],
-    "headers": [
-      {
-        "source": "/(.*)",
-        "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "*" }
-        ]
-      }
-    ],
-    "functions": {
-      "api/index.js": {
-        "runtime": "nodejs18.x"
-      }
-    }
-}
+    "routes" :[
+        {
+            "src" : "/(.*)",
+            "dest" : "/"
+        }
+    ]
+  }
+  
