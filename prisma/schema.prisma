@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// prisma/schema.prisma
+datasource db {
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
+}
+
+model AnggaranTKD {
+  id          Int      @id @default(autoincrement())
+  jenis_tkd   String
+  tahun       Int
+  daerah      String // ← ini WAJIB kamu tambahkan
+  semula      BigInt?
+  pencadangan BigInt?
+  menjadi     BigInt?
+  pagu        BigInt?
+  realisasi   Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AlokasiTKD {
+  id           Int      @id @default(autoincrement())
+  tahun        Int
+  daerah       String
+  dbh          Decimal
+  dau          Decimal
+  dakFisik     Decimal
+  dakNonfisik  Decimal
+  danaDesa     Decimal
+  infis        Decimal
+  total        Decimal
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Admin {
+  id        Int    @id @default(autoincrement())
+  email     String @unique
+  kode      String
+}
+
+// enum who{
+//   admin
+// }
+
+
