@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "bulids": [
+    "builds": [
       { "src": "/api/app.js",
     "use": "@vercel/node" }
     ],
