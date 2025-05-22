@@ -1,14 +1,14 @@
 {
     "version": 2,
-    "functions": {
-      "api/index.js": {
-        "runtime": "nodejs18.x"
-      }
-    },
-    "routes": [
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/api/index.js" }
+    ],
+    "headers": [
       {
-        "src": "/(.*)",
-        "dest": "/api/index.js"
+        "source": "/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "*" }
+        ]
       }
     ]
   }
