@@ -8,9 +8,9 @@ app.use(express.json());
 app.use(cors());
 
 // Import router dari folder lain
-const tkdRouter = require('../tkd/tkd.controller');
-const alokasiController = require('../AlokasiTKD/alokasi.controller');
-const adminController = require('../adminlogin/admin.controller');
+const tkdRouter = require('../src/tkd/tkd.controller');
+const alokasiController = require('../src/AlokasiTKD/alokasi.controller');
+const adminController = require('../src/adminlogin/admin.controller');
 
 app.get('/', (req, res) => {
   res.send('Hello from Vercel serverless Express!');
