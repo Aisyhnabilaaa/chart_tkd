@@ -22,5 +22,4 @@ app.use('/alokasi', alokasiController);
 const adminController = require('./adminlogin/admin.controller');
 app.use('/admin', adminController);
 
-// export default app
-
+module.exports = app;
