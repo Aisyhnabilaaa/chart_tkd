@@ -10,6 +10,10 @@
           { "key": "Access-Control-Allow-Origin", "value": "*" }
         ]
       }
-    ]
-  }
-  
+    ],
+    "functions": {
+      "api/index.js": {
+        "runtime": "nodejs22.x"
+      }
+    }
+}
