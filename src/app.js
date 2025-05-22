@@ -14,12 +14,12 @@ res.send('Hello there!')
 // })
 
 const tkdRouter = require("./tkd/tkd.controller");
-app.use("/tkd", tkdRouter);
+app.use("/api/tkd", tkdRouter);
 
 const alokasiController = require('./AlokasiTKD/alokasi.controller');
 app.use('/api/alokasi', alokasiController);
 
 const adminController = require('./adminlogin/admin.controller');
-app.use('/admin', adminController);
+app.use('/api/admin', adminController);
 
 export default app
