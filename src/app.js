@@ -5,10 +5,14 @@ app.use(express.json());
 const cors = require("cors");
 app.use(cors());
 
+app.get("/api", (req, res) => {
+    res.send('Hello from the API!');
+  });
 
-app.get("/", (req, res) => {
-res.send('Hello there!')
-})
+
+// app.get("/", (req, res) => {
+// res.send('Hello there!')
+// })
 // app.listen(3000, () => {
 // console.log(`App listening on port ` + 3000)
 // })
