@@ -1,4 +1,5 @@
-const prisma = require('../lib/prisma');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 const express = require('express');
 const router = express.Router();
 const alokasiService = require('./alokasi.service');
