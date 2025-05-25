@@ -32,7 +32,9 @@ const port = 3000
 app.use(express.json());
 
 const cors = require("cors");
-app.use(cors());
+app.use(cors({
+  origin: 'https://tkdkppnpalu-production.up.railway.app'
+}));
 
 app.get("/", (req, res) => {
   res.send('Hello there!');
