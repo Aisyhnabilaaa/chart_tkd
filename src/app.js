@@ -32,7 +32,7 @@ app.use(express.json());
 
 const cors = require("cors");
 app.use(cors({
-  origin: 'https://tkdkppnpalu-production.up.railway.app',
+  origin: 'https://charttkd-production.up.railway.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
