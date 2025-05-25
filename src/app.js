@@ -28,18 +28,19 @@ require("dotenv").config();
 
 const express = require('express');
 const app = express();
+const port = 3000
 app.use(express.json());
 
 const cors = require("cors");
-app.use(cors({
-  // origin: 'https://tkdkppnpalu-production.up.railway.app',
-  // methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  // credentials: true
-}));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send('Hello there!');
 });
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 const tkdRouter = require("./tkd/tkd.controller");
 app.use("/tkd", tkdRouter);
