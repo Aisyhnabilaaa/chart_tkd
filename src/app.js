@@ -10,11 +10,11 @@ app.get("/", (req, res) => {
 res.send('Hello there!')
 })
 
-// Gunakan PORT dari environment variable
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`App listening on port ` + PORT);
 });
+
 
 // Import routes after basic middleware
 const tkdRouter = require("./tkd/tkd.controller");
