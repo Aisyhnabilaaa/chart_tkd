@@ -22,6 +22,7 @@ const adminController = require('./adminlogin/admin.controller');
 app.use('/admin', adminController);
 
 
+
 // const express = require('express');
 // const cors = require('cors');
 // const app = express();
