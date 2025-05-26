@@ -9,9 +9,12 @@ app.use(cors());
 app.get("/", (req, res) => {
 res.send('Hello there!')
 })
-app.listen(3000, () => {
-console.log(`App listening on port ` + 3000)
-})
+
+// Gunakan PORT dari environment variable
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
+});
 
 // Import routes after basic middleware
 const tkdRouter = require("./tkd/tkd.controller");
